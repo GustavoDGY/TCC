@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://4wjct6d8k6cb"]
+
+[ext_resource type="PackedScene" uid="uid://g0uprq3lpxmg" path="res://Rooms/Sala1.tscn" id="1_tluld"]
+[ext_resource type="PackedScene" uid="uid://dgvvdq2wm7i1o" path="res://Scenes/player.tscn" id="2_k18rr"]
+
+[node name="Main" type="Node2D"]
+
+[node name="sala1" parent="." instance=ExtResource("1_tluld")]
+
+[node name="Player" parent="." instance=ExtResource("2_k18rr")]
+position = Vector2(89, 338)
