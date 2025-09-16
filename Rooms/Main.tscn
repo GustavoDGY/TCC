@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://4wjct6d8k6cb"]
+[gd_scene load_steps=4 format=3 uid="uid://4wjct6d8k6cb"]
 
 [ext_resource type="PackedScene" uid="uid://g0uprq3lpxmg" path="res://Rooms/Sala1.tscn" id="1_tluld"]
 [ext_resource type="PackedScene" uid="uid://dgvvdq2wm7i1o" path="res://Scenes/player.tscn" id="2_k18rr"]
+[ext_resource type="PackedScene" uid="uid://byx105xmr01g6" path="res://Scenes/enemy.tscn" id="3_k18rr"]
 
 [node name="Main" type="Node2D"]
 
@@ -9,3 +10,7 @@
 
 [node name="Player" parent="." instance=ExtResource("2_k18rr")]
 position = Vector2(89, 338)
+
+[node name="Enemy" parent="." instance=ExtResource("3_k18rr")]
+position = Vector2(85, 293)
+scale = Vector2(0.7, 0.7)

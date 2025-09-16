@@ -1,9 +1,11 @@
 extends CharacterBody2D
-
+class_name Player
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 
+@export var knockback_force: Vector2 = Vector2(300, -200)
+var is_knocked: bool = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -23,3 +25,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func apply_knockback(direction: int) -> void:
+	is_knocked = true
+	velocity.x = knockback_force.x * direction
+	velocity.y = knockback_force.y

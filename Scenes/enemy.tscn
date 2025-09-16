@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://byx105xmr01g6"]
+
+[ext_resource type="Script" uid="uid://dcl3pcdtbdk3h" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://wlex34i045ce" path="res://Assets/enemy/temp-enemy.png" id="2_afpow"]
+[ext_resource type="Script" uid="uid://8j63kln4c3mo" path="res://Scripts/detection_area.gd" id="3_afpow"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_afpow"]
+radius = 7.5
+height = 34.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_287tu"]
+size = Vector2(32, 17)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_1f0kj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_afpow")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_afpow")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+script = ExtResource("3_afpow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 7.5)
+shape = SubResource("RectangleShape2D_287tu")
+
+[node name="AttackArea2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2"]
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(16, 0)
