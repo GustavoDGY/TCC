@@ -14,3 +14,6 @@ position = Vector2(89, 338)
 [node name="Enemy" parent="." instance=ExtResource("3_k18rr")]
 position = Vector2(85, 293)
 scale = Vector2(0.7, 0.7)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_k18rr")]
+position = Vector2(219, 301)

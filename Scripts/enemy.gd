@@ -30,7 +30,8 @@ func flip_direction() -> void:
 	sprite.flip_h = direction < 0
 	floor_ray.position.x = -floor_ray.position.x
 
-func _on_body_entered(body: Node) -> void:
-	if body.is_in_group("player"): # coloque seu Player no grupo "player"
+func _on_body_entered(body: Node2D) -> void:
+	# Verifica se o corpo que colidiu é uma instância do Player
+	if body is Player:
 		var knockback_dir = sign(body.global_position.x - global_position.x)
 		body.apply_knockback(knockback_dir)
