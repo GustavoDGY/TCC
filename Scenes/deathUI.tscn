@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://s0fxmhiv2d5q"]
+
+[ext_resource type="Script" uid="uid://d37u5sste4yhr" path="res://Scripts/death_ui.gd" id="1_e6fjf"]
+
+[node name="DeathUI" type="CanvasLayer"]
+process_mode = 3
+visible = false
+script = ExtResource("1_e6fjf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.588235)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 266.0
+offset_right = 593.0
+offset_bottom = 289.0
+text = "Você Morreu!"
+
+[node name="Button" type="Button" parent="ColorRect"]
+offset_left = 467.0
+offset_top = 319.0
+offset_right = 621.0
+offset_bottom = 350.0
+text = "Tentar Novamente"
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]

@@ -1,36 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://byx105xmr01g6"]
+[gd_scene load_steps=5 format=3 uid="uid://byx105xmr01g6"]
 
 [ext_resource type="Script" uid="uid://dcl3pcdtbdk3h" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://wlex34i045ce" path="res://Assets/Enemy/temp-enemy.png" id="2_afpow"]
 [ext_resource type="Script" uid="uid://8j63kln4c3mo" path="res://Scripts/detection_area.gd" id="3_afpow"]
+=======
+[ext_resource type="Texture2D" uid="uid://wlex34i045ce" path="res://Assets/enemy/temp-enemy.png" id="2_afpow"]
+>>>>>>> 5dbd720797d5424e2e81078969c0f91a6ea3cf47
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_afpow"]
-radius = 7.5
-height = 34.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0kj"]
+size = Vector2(12, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_287tu"]
-size = Vector2(32, 17)
+size = Vector2(28, 14)
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_1f0kj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(1.12057e-05, 8.99998)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_afpow")
+shape = SubResource("RectangleShape2D_1f0kj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_afpow")
 
-[node name="DetectionArea" type="Area2D" parent="."]
-script = ExtResource("3_afpow")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-
 [node name="Hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(0, 7.5)
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_287tu")
 
 [node name="AttackArea2" type="Area2D" parent="."]
