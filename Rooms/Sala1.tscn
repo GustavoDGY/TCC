@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=4 uid="uid://g0uprq3lpxmg"]
-
-[ext_resource type="PackedScene" uid="uid://dwnxcn1e32wdd" path="res://Rooms/Default.tscn" id="1_wluxl"]
-[ext_resource type="PackedScene" uid="uid://0chdapbawldh" path="res://Rooms/Aux_Default.tscn" id="2_apvit"]
-
-[node name="sala1" instance=ExtResource("1_wluxl")]
-
-[node name="aux" parent="." index="0" instance=ExtResource("2_apvit")]
-tile_map_data = PackedByteArray("AAAEABYAAAABAAkAAAAFABYAAAACAAkAAAAGABYAAAADAAkAAAAEABMAAAABAAkAAAAFABMAAAACAAkAAAAGABMAAAADAAkAAAAEABAAAAABAAkAAAAFABAAAAACAAkAAAAGABAAAAADAAkAAAA=")

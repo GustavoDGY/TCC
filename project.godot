@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="TCC"
-run/main_scene="uid://4wjct6d8k6cb"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -60,6 +59,6 @@ ui_up={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.6044259, 0.2930974, 0.040151827, 1)
+environment/defaults/default_clear_color=Color(0.1355989, 0.40994546, 0.6239369, 1)
 2d/snap/snap_2d_transforms_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true

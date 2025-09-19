@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgvvdq2wm7i1o"]
+[gd_scene load_steps=5 format=3 uid="uid://dgvvdq2wm7i1o"]
 
 [ext_resource type="Script" uid="uid://dk223xv6y60qa" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://ckwepooctfhh6" path="res://Assets/player/temp-player.png" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://i5lwgr3mlu2k" path="res://Scripts/Camera.gd" id="3_6t5aa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
 height = 32.0
@@ -26,3 +27,4 @@ limit_top = 0
 limit_right = 416
 limit_bottom = 416
 limit_smoothed = true
+script = ExtResource("3_6t5aa")

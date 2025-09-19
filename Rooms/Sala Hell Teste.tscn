@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://ccnq3ngd46wyx" path="res://Assets/Tilesets Hell/Tileset Hell.tres" id="1_g5svg"]
 [ext_resource type="PackedScene" uid="uid://dgvvdq2wm7i1o" path="res://Scenes/player.tscn" id="2_2ci4p"]
-[ext_resource type="PackedScene" uid="uid://bksius6oylosv" path="res://Assets/Enemy/Bloated/Bloated.tscn" id="2_rq32g"]
+[ext_resource type="PackedScene" uid="uid://bksius6oylosv" path="res://Assets/enemy/Bloated/Bloated.tscn" id="2_rq32g"]
 
 [node name="SalaHellTeste" type="Node2D"]
 texture_filter = 1

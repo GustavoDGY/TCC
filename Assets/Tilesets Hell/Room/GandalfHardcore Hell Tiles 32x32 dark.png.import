@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://871vswhx03tw"
-path="res://.godot/imported/Bloated Damned.png-276f9e32b280ff06d9e7de902773d247.ctex"
+uid="uid://mgc44eocdqmt"
+path="res://.godot/imported/GandalfHardcore Hell Tiles 32x32 dark.png-3b4c4c2d5a1f838e7098370ccb8e74b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/enemy/Bloated/Bloated Damned.png"
-dest_files=["res://.godot/imported/Bloated Damned.png-276f9e32b280ff06d9e7de902773d247.ctex"]
+source_file="res://Assets/Tilesets Hell/Room/GandalfHardcore Hell Tiles 32x32 dark.png"
+dest_files=["res://.godot/imported/GandalfHardcore Hell Tiles 32x32 dark.png-3b4c4c2d5a1f838e7098370ccb8e74b5.ctex"]
 
 [params]
 

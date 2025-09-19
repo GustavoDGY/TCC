@@ -7,7 +7,6 @@ const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 var vida = 5
 
-
 @onready var death_ui = $"../DeathUI"
 
 @export var knockback_force: Vector2 = Vector2(100, -100)
