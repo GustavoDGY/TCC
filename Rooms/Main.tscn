@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://4wjct6d8k6cb"]
+[gd_scene load_steps=6 format=3 uid="uid://4wjct6d8k6cb"]
 
+[ext_resource type="PackedScene" uid="uid://s0fxmhiv2d5q" path="res://Scenes/deathUI.tscn" id="1_lpbty"]
 [ext_resource type="PackedScene" uid="uid://g0uprq3lpxmg" path="res://Rooms/Sala1.tscn" id="1_tluld"]
 [ext_resource type="PackedScene" uid="uid://dgvvdq2wm7i1o" path="res://Scenes/player.tscn" id="2_k18rr"]
 [ext_resource type="PackedScene" uid="uid://byx105xmr01g6" path="res://Scenes/enemy.tscn" id="3_k18rr"]
+[ext_resource type="Script" uid="uid://j1bwoekphik8" path="res://Scripts/lifeUI.gd" id="5_5cta8"]
 
 [node name="Main" type="Node2D"]
 
@@ -17,3 +19,16 @@ scale = Vector2(0.7, 0.7)
 
 [node name="Enemy2" parent="." instance=ExtResource("3_k18rr")]
 position = Vector2(219, 301)
+
+[node name="DeathUI" parent="." instance=ExtResource("1_lpbty")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_5cta8")
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "Vida: 5"

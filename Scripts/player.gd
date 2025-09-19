@@ -1,9 +1,14 @@
 extends CharacterBody2D
 class_name Player
 
+signal vida_mudou(nova_vida: int)
+
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 var vida = 5
+
+
+@onready var death_ui = $"../DeathUI"
 
 @export var knockback_force: Vector2 = Vector2(100, -100)
 var is_knocked: bool = false
@@ -47,3 +52,11 @@ func apply_knockback(direction: int) -> void:
 func end_knockback() -> void:
 	is_knocked = false
 	velocity.x = 0
+
+func take_damage(damage_amount: int) -> void:
+	vida -= damage_amount
+	vida_mudou.emit(vida)
+	# Futuramente, você pode adicionar a lógica de "morte" aqui
+	if vida <= 0:
+		# Chama a função para mostrar a tela de morte
+		death_ui.show_death_screen()

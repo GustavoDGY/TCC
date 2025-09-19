@@ -33,5 +33,7 @@ func flip_direction() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	# Verifica se o corpo que colidiu é uma instância do Player
 	if body is Player:
+		# Chama a função take_damage() no script do jogador
+		body.take_damage(1)
 		var knockback_dir = sign(body.global_position.x - global_position.x)
 		body.apply_knockback(knockback_dir)
