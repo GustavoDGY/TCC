@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://byx105xmr01g6"]
 
 [ext_resource type="Script" uid="uid://dcl3pcdtbdk3h" path="res://Scripts/enemy.gd" id="1_1f0kj"]
-[ext_resource type="Texture2D" uid="uid://wlex34i045ce" path="res://Assets/enemy/temp-enemy.png" id="2_afpow"]
+[ext_resource type="Texture2D" uid="uid://wlex34i045ce" path="res://Assets/Enemy/temp-enemy.png" id="2_afpow"]
 [ext_resource type="Script" uid="uid://8j63kln4c3mo" path="res://Scripts/detection_area.gd" id="3_afpow"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_afpow"]
