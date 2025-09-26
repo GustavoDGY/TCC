@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://bvspkeg17yi3u"]
+[gd_scene load_steps=4 format=4 uid="uid://bvspkeg17yi3u"]
 
 [ext_resource type="TileSet" uid="uid://ccnq3ngd46wyx" path="res://Assets/Tilesets Hell/Tileset Hell.tres" id="1_sjgbb"]
 [ext_resource type="PackedScene" uid="uid://dgvvdq2wm7i1o" path="res://Scenes/player.tscn" id="2_b0mlh"]
+[ext_resource type="Script" uid="uid://j1bwoekphik8" path="res://Scripts/lifeUI.gd" id="3_b0mlh"]
 
 [node name="Main Hall" type="Node2D"]
 texture_filter = 1
@@ -19,3 +20,11 @@ tile_set = ExtResource("1_sjgbb")
 
 [node name="Player" parent="." instance=ExtResource("2_b0mlh")]
 position = Vector2(41, 32)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_b0mlh")
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2

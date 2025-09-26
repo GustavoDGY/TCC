@@ -24,6 +24,7 @@ offset_bottom = 289.0
 text = "Você Morreu!"
 
 [node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
 offset_left = 467.0
 offset_top = 319.0
 offset_right = 621.0
