@@ -1,10 +1,15 @@
-[gd_scene format=3 uid="uid://vbxxi7qia6q7"]
+[gd_scene load_steps=2 format=3 uid="uid://vbxxi7qia6q7"]
+
+[ext_resource type="TileSet" uid="uid://ccnq3ngd46wyx" path="res://Assets/Tilesets Hell/Tileset Hell.tres" id="1_7nrj2"]
 
 [node name="Default" type="Node2D"]
 texture_filter = 1
 
 [node name="Background" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_7nrj2")
 
 [node name="Auxiliar" type="TileMapLayer" parent="Background"]
+tile_set = ExtResource("1_7nrj2")
 
 [node name="Walls" type="TileMapLayer" parent="Background/Auxiliar"]
+tile_set = ExtResource("1_7nrj2")

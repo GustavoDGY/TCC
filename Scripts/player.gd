@@ -56,6 +56,6 @@ func take_damage(damage_amount: int) -> void:
 	vida -= damage_amount
 	vida_mudou.emit(vida)
 	# Futuramente, você pode adicionar a lógica de "morte" aqui
-	if vida <= 0:
+	# if vida <= 0:
 		# Chama a função para mostrar a tela de morte
-		death_ui.show_death_screen()
+		#death_ui.show_death_screen()

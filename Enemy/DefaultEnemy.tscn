@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp7nn22yg7k87"]
+
+[ext_resource type="Script" uid="uid://dcl3pcdtbdk3h" path="res://Scripts/Enemy.gd" id="1_gamde"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ll0l"]
+size = Vector2(150, 35)
+
+[node name="DefaultEnemy" type="CharacterBody2D"]
+texture_filter = 1
+script = ExtResource("1_gamde")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5)
+animation = &"idle"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="HitboxCollision" type="CollisionShape2D" parent="Hitbox"]
+debug_color = Color(0.994567, 0.000106441155, 5.852699e-05, 0.41960785)
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 44)
+
+[node name="ChaseArea" type="Area2D" parent="."]
+
+[node name="ChaseShape" type="CollisionShape2D" parent="ChaseArea"]
+shape = SubResource("RectangleShape2D_1ll0l")
+debug_color = Color(0.08047766, 0.6494529, 1.1551381e-06, 0.41960785)

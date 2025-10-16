@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd120laxi35i0"]
+
+[ext_resource type="PackedScene" uid="uid://cp7nn22yg7k87" path="res://Enemy/DefaultEnemy.tscn" id="1_kp6it"]
+[ext_resource type="SpriteFrames" uid="uid://bhvmxe44d6e7i" path="res://Enemy/Bloated/Bloated.tres" id="2_kp6it"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bc8k8"]
+radius = 8.0
+height = 42.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kp6it"]
+radius = 9.0
+height = 42.0
+
+[node name="Bloated" instance=ExtResource("1_kp6it")]
+vida = 5
+speed = 32.0
+enemy_state = 1
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_kp6it")
+animation = &"patrol"
+autoplay = "idle"
+frame_progress = 0.07148123
+
+[node name="Collision" parent="." index="1"]
+visible = false
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_bc8k8")
+
+[node name="Hitbox" parent="." index="2"]
+visible = false
+
+[node name="HitboxCollision" parent="Hitbox" index="0"]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_kp6it")
+
+[node name="RayCast2D" parent="." index="3"]
+visible = false
+position = Vector2(0, 1)
+
+[node name="ChaseShape" parent="ChaseArea" index="0"]
+position = Vector2(-76, 5)
