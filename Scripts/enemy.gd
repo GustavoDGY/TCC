@@ -20,6 +20,8 @@ var teste = 0
 
 func _ready() -> void:
 	hitbox.body_entered.connect(_on_body_entered)
+	# Normaliza a escala do nó raiz e sincroniza a orientação visual inicial
+	self.scale.x = direction * -1
 
 func _process(delta: float) -> void:
 	control_animation()
@@ -30,15 +32,15 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = 0
 
+	if is_on_wall() or not floor_ray.is_colliding():
+		flip_direction()
+
 	if enemy_state == EnemyState.PATROLLING:
 		velocity.x = direction * speed
 	elif enemy_state == EnemyState.IDLE:
 		velocity.x = 0
 		
 	move_and_slide()
-	
-	if is_on_wall() or not floor_ray.is_colliding():
-		flip_direction()
 
 func control_animation():
 	if enemy_state == EnemyState.IDLE:
@@ -48,13 +50,15 @@ func control_animation():
 
 func flip_direction():
 	direction *= -1
-	self.scale.x = direction
+	# Espelha somente o sprite para evitar conflitos com filhos
+	sprite.flip_h = direction < 0
+	# Ajusta o RayCast para olhar sempre para a frente
 	floor_ray.position.x = -floor_ray.position.x
+	if enemy_state == EnemyState.PATROLLING:
+		velocity.x = direction * speed
 
 func _on_body_entered(body: Node2D) -> void:
-	# Verifica se o corpo que colidiu é uma instância do Player
 	if body is Player:
-		# Chama a função take_damage() no script do jogador
 		body.take_damage(1)
 		var knockback_dir = sign(body.global_position.x - global_position.x)
 		body.apply_knockback(knockback_dir)
