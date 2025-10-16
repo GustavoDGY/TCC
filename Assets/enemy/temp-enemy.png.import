@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgo5buw4l5cud"
-path="res://.godot/imported/GandalfHardcore Hell Tiles 32x32.png-c345d1b9de9192d5462e42364b8fcde0.ctex"
+uid="uid://wlex34i045ce"
+path="res://.godot/imported/temp-enemy.png-a60a3a29b67c0e58aacb071890527fac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets Hell/Room/GandalfHardcore Hell Tiles 32x32.png"
-dest_files=["res://.godot/imported/GandalfHardcore Hell Tiles 32x32.png-c345d1b9de9192d5462e42364b8fcde0.ctex"]
+source_file="res://Assets/enemy/temp-enemy.png"
+dest_files=["res://.godot/imported/temp-enemy.png-a60a3a29b67c0e58aacb071890527fac.ctex"]
 
 [params]
 

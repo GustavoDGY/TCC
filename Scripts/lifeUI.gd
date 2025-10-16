@@ -19,4 +19,4 @@ func _on_player_vida_mudou(nova_vida: int):
 
 	# Se estiver usando um Label, você pode fazer algo assim:
 	var label_node = get_child(0)
-	label_node.text = "Vida: " + str(nova_vida)
+	label_node.text = "❤️".repeat(nova_vida)

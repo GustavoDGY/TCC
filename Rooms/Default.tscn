@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 [gd_scene load_steps=2 format=3 uid="uid://vbxxi7qia6q7"]
 
 [ext_resource type="TileSet" uid="uid://ccnq3ngd46wyx" path="res://Assets/Tilesets Hell/Tileset Hell.tres" id="1_7nrj2"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://vbxxi7qia6q7"]
+
+[ext_resource type="TileSet" uid="uid://ccnq3ngd46wyx" path="res://Assets/Tilesets Hell/Tileset Hell.tres" id="1_7nrj2"]
+[ext_resource type="Script" uid="uid://j1bwoekphik8" path="res://Scripts/lifeUI.gd" id="2_fqh2c"]
+>>>>>>> 45aa0a71c55da7ce70115f8f41a77ce48a137381
 
 [node name="Default" type="Node2D"]
 texture_filter = 1
@@ -13,3 +20,14 @@ tile_set = ExtResource("1_7nrj2")
 
 [node name="Walls" type="TileMapLayer" parent="Background/Auxiliar"]
 tile_set = ExtResource("1_7nrj2")
+<<<<<<< HEAD
+=======
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_fqh2c")
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+>>>>>>> 45aa0a71c55da7ce70115f8f41a77ce48a137381

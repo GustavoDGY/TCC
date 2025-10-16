@@ -17,8 +17,8 @@ func set_limite():
 	#16 é o valor padrão de um tile
 	var tile_size = 16
 	
-	self.limit_enabled = true
+	#self.limit_enabled = true
 	self.limit_left = -tile_size
 	self.limit_top = 0
 	self.limit_right = (limite.x * tile_size) + tile_size
-	self.limit_bottom = limite.y - tile_size
+	self.limit_bottom = (limite.y * tile_size) - tile_size

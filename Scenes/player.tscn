@@ -21,7 +21,7 @@ texture_repeat = 1
 texture = ExtResource("1_v0iea")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3.5, 3.5)
+zoom = Vector2(3, 3)
 limit_left = 0
 limit_top = 0
 limit_right = 416
