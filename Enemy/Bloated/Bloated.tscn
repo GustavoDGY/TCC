@@ -13,7 +13,6 @@ height = 42.0
 
 [node name="Bloated" instance=ExtResource("1_kp6it")]
 vida = 5
-speed = 32.0
 enemy_state = 1
 
 [node name="AnimatedSprite2D" parent="." index="0"]
@@ -39,3 +38,5 @@ position = Vector2(0, 1)
 
 [node name="ChaseShape" parent="ChaseArea" index="0"]
 position = Vector2(-76, 5)
+
+[connection signal="body_entered" from="ChaseArea" to="." method="_on_chase_area_body_entered"]
