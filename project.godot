@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="TCC"
-run/main_scene="uid://vbxxi7qia6q7"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+run/main_scene="uid://csf5cc27vqcxa"
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]

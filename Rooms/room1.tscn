@@ -43,6 +43,7 @@ position = Vector2(342, 530)
 position = Vector2(622, 597)
 
 [node name="DeathUI" parent="." instance=ExtResource("4_hj0iu")]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

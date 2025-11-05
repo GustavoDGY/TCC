@@ -23,6 +23,7 @@ func _ready() -> void:
 	# Normaliza a escala do nó raiz e sincroniza a orientação visual inicial
 	self.scale.x = direction * -1
 
+@warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	control_animation()
 

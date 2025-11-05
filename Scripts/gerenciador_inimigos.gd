@@ -1,44 +1,46 @@
 extends Node2D
 
-# Use "export" para facilitar a configuração no editor Godot
-@export var inimigo_cena : PackedScene
-
-# A lista de nós Marker2D que são os pontos de spawn
+var inimigo_cena : PackedScene = preload("res://Enemy/Bloated/Bloated.tscn")
 var spawn_points : Array[Marker2D]
 
 func _ready():
-	# Clear the array first to be safe
 	spawn_points.clear()
 	
-	# Iterate through all children of this node
 	for child in get_children():
-		# Check if the child is a Marker2D
 		if child is Marker2D:
-			# Add it to our array of spawn points
 			spawn_points.append(child)
 			
-	# Now you can proceed with spawning
-	spawnar_inimigo_aleatorio()
+	# 🎯 NOVA LÓGICA: Spawna um inimigo em CADA ponto de spawn encontrado
+	spawnar_em_todos_os_pontos()
 
-func spawnar_inimigo_aleatorio():
-	# Verifique se a cena do inimigo foi carregada
+
+func spawnar_em_um_ponto(ponto_de_spawn: Marker2D):
+	# Verificações de segurança (opcional, mas bom ter)
 	if not inimigo_cena:
-		print("Erro: A cena do inimigo não foi definida.")
+		print("Erro: A cena do inimigo não foi definida/carregada.")
 		return
 
-	# Verifique se existem pontos de spawn
-	if spawn_points.is_empty():
-		print("Erro: Nenhum ponto de spawn encontrado.")
-		return
-
-	# Escolha um ponto de spawn aleatoriamente
-	var ponto_aleatorio = spawn_points.pick_random()
-
-	# Crie uma nova instância da cena do inimigo
+	# 🌟 Crie uma nova instância da cena do inimigo
 	var novo_inimigo = inimigo_cena.instantiate()
 
-	# Defina a posição do inimigo na posição do ponto de spawn escolhido
-	novo_inimigo.global_position = ponto_aleatorio.global_position
+	# Defina a posição do inimigo na posição do ponto de spawn fornecido
+	novo_inimigo.global_position = ponto_de_spawn.global_position
 
 	# Adicione o inimigo à cena atual
 	add_child(novo_inimigo)
+
+
+func spawnar_em_todos_os_pontos():
+	if spawn_points.is_empty():
+		print("Erro: Nenhum ponto de spawn encontrado.")
+		return
+	
+	# Itera sobre o array e chama a função para cada um
+	for ponto in spawn_points:
+		spawnar_em_um_ponto(ponto)
+
+
+# A função original que spawneria apenas um aleatório (agora não é mais chamada no _ready())
+# func spawnar_inimigo_aleatorio():
+# 	var ponto_aleatorio = spawn_points.pick_random()
+# 	spawnar_em_um_ponto(ponto_aleatorio)

@@ -18,9 +18,8 @@ enemy_state = 1
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = ExtResource("2_kp6it")
-animation = &"patrol"
 autoplay = "idle"
-frame_progress = 0.07148123
+frame_progress = 0.953088
 
 [node name="Collision" parent="." index="1"]
 visible = false

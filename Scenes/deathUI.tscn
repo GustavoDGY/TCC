@@ -4,7 +4,6 @@
 
 [node name="DeathUI" type="CanvasLayer"]
 process_mode = 3
-visible = false
 script = ExtResource("1_e6fjf")
 
 [node name="ColorRect" type="ColorRect" parent="."]
