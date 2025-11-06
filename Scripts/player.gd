@@ -11,7 +11,7 @@ var vida = 5
 @onready var animation = $AnimatedSprite2D
 @onready var player = $"."
 
-@export var knockback_force: Vector2 = Vector2(100, -100)
+@export var knockback_force: Vector2 = Vector2(175, -300)
 var is_knocked: bool = false
 @onready var knockback_timer: Timer = Timer.new()
 
