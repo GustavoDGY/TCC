@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mgc44eocdqmt"
-path="res://.godot/imported/GandalfHardcore Hell Tiles 32x32 dark.png-3b4c4c2d5a1f838e7098370ccb8e74b5.ctex"
+uid="uid://deagkid1cblom"
+path="res://.godot/imported/WeaponsSheet.png-05665f3fa027e29c81f1bb4853ce9605.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets Hell/Room/GandalfHardcore Hell Tiles 32x32 dark.png"
-dest_files=["res://.godot/imported/GandalfHardcore Hell Tiles 32x32 dark.png-3b4c4c2d5a1f838e7098370ccb8e74b5.ctex"]
+source_file="res://Assets/player/WeaponsSheet.png"
+dest_files=["res://.godot/imported/WeaponsSheet.png-05665f3fa027e29c81f1bb4853ce9605.ctex"]
 
 [params]
 
