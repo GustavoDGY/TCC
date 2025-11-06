@@ -21,4 +21,4 @@ func set_limite():
 	self.limit_left = -tile_size
 	self.limit_top = 0
 	self.limit_right = (limite.x * tile_size) + tile_size
-	self.limit_bottom = (limite.y * tile_size) - tile_size
+	self.limit_bottom = (limite.y * tile_size) - tile_size*7

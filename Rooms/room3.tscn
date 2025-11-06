@@ -23,7 +23,7 @@ tile_map_data = PackedByteArray("AAAFAPn/AQAZAAIAAAAFAPr/AQAZAAEAAAAFAPv/AQAZAAE
 tile_set = ExtResource("1_cbgst")
 
 [node name="Player" parent="." instance=ExtResource("2_c64ps")]
-position = Vector2(248.00002, -74)
+position = Vector2(248, -74)
 
 [node name="GerenciadorInimigos" type="Node2D" parent="."]
 script = ExtResource("3_xemoy")
@@ -44,6 +44,7 @@ position = Vector2(73, 197)
 position = Vector2(438, 214)
 
 [node name="DeathUI" parent="." instance=ExtResource("4_6gwcq")]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
