@@ -3,8 +3,8 @@ class_name Player
 
 signal vida_mudou(nova_vida: int)
 
-const SPEED = 150.0
-const JUMP_VELOCITY = -300.0
+const SPEED = 175.0
+const JUMP_VELOCITY = -350.0
 var vida = 5
 
 @onready var death_ui = $"../DeathUI"
