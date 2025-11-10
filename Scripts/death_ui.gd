@@ -19,5 +19,5 @@ func _on_button_pressed() -> void:
 	# Primeiro, despausa o jogo
 	get_tree().paused = false
 	
-	# Agora, reinicia a cena atual
-	get_tree().reload_current_scene()
+	# Agora, reinicia o jogo
+	get_tree().change_scene_to_file("res://Rooms/room0.tscn")

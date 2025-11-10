@@ -20,7 +20,7 @@ func spawnar_em_um_ponto(ponto_de_spawn: Marker2D):
 		print("Erro: A cena do inimigo não foi definida/carregada.")
 		return
 
-	# 🌟 Crie uma nova instância da cena do inimigo
+	# Crie uma nova instância da cena do inimigo
 	var novo_inimigo = inimigo_cena.instantiate()
 
 	# Defina a posição do inimigo na posição do ponto de spawn fornecido

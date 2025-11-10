@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=4 uid="uid://hxhbwxm01jmj"]
+[gd_scene load_steps=8 format=4 uid="uid://hxhbwxm01jmj"]
 
 [ext_resource type="TileSet" uid="uid://ccnq3ngd46wyx" path="res://Assets/Tilesets Hell/Tileset Hell.tres" id="1_cbgst"]
 [ext_resource type="PackedScene" uid="uid://dgvvdq2wm7i1o" path="res://Scenes/player.tscn" id="2_c64ps"]
 [ext_resource type="Script" uid="uid://cp155akq71g3h" path="res://Scripts/gerenciador_inimigos.gd" id="3_xemoy"]
 [ext_resource type="PackedScene" uid="uid://s0fxmhiv2d5q" path="res://Scenes/deathUI.tscn" id="4_6gwcq"]
 [ext_resource type="Script" uid="uid://j1bwoekphik8" path="res://Scripts/lifeUI.gd" id="5_je01t"]
+[ext_resource type="Script" uid="uid://i2txr58108kc" path="res://Scripts/Hole.gd" id="6_c64ps"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xemoy"]
+size = Vector2(218, 280)
 
 [node name="Default" type="Node2D"]
 texture_filter = 1
@@ -57,3 +61,10 @@ script = ExtResource("5_je01t")
 
 [node name="Label" type="Label" parent="CanvasLayer/HBoxContainer2"]
 layout_mode = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("6_c64ps")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(289, 521)
+shape = SubResource("RectangleShape2D_xemoy")

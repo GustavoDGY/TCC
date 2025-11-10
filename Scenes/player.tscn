@@ -253,7 +253,7 @@ animations = [{
 radius = 8.0
 height = 40.9231
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 texture_filter = 1
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_cvnsp")
